@@ -1,0 +1,134 @@
+[1/5] C:\Windows\system32\cmd.exe /C "cd /D C:\Espressif\wrokspace\hello_world\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.4/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Espressif/wrokspace/hello_world/build/partition_table/partition-table.bin C:/Espressif/wrokspace/hello_world/build/doorbell_demo.bin"
+doorbell_demo.bin binary size 0x224420 bytes. Smallest app partition is 0x300000 bytes. 0xdbbe0 bytes (29%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D C:\Espressif\wrokspace\hello_world\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.4/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Espressif/wrokspace/hello_world/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6560 bytes. 0xaa0 bytes (9%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] C:\Windows\system32\cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.4\components\esptool_py && C:\Espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.4 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.4_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.4/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Espressif/wrokspace/hello_world/build -P C:/Espressif/frameworks/esp-idf-v5.4/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32 -p COM7 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x10000 doorbell_demo.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port COM7
+Connecting.......
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 8c:4b:14:14:8f:1c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00234fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 25952 bytes to 16368...
+Writing at 0x00001000... (100 %)
+Wrote 25952 bytes (16368 compressed) at 0x00001000 in 0.7 seconds (effective 287.3 kbit/s)...
+Hash of data verified.
+Compressed 2245664 bytes to 1525914...
+Writing at 0x00010000... (1 %)
+Writing at 0x00020140... (2 %)
+Writing at 0x0002e4f4... (3 %)
+Writing at 0x00037945... (4 %)
+Writing at 0x0003b9df... (5 %)
+Writing at 0x0003fb08... (6 %)
+Writing at 0x00044d57... (7 %)
+Writing at 0x00049b73... (8 %)
+Writing at 0x0004de24... (9 %)
+Writing at 0x00051f9e... (10 %)
+Writing at 0x00057923... (11 %)
+Writing at 0x0005c959... (12 %)
+Writing at 0x0006147e... (13 %)
+Writing at 0x000662ab... (14 %)
+Writing at 0x0006fcf1... (15 %)
+Writing at 0x00074afc... (17 %)
+Writing at 0x0007935d... (18 %)
+Writing at 0x0007fc86... (19 %)
+Writing at 0x000847d9... (20 %)
+Writing at 0x0008969e... (21 %)
+Writing at 0x0008eb3c... (22 %)
+Writing at 0x00095fc9... (23 %)
+Writing at 0x000a0edd... (24 %)
+Writing at 0x000a6ac4... (25 %)
+Writing at 0x000acc8e... (26 %)
+Writing at 0x000b392c... (27 %)
+Writing at 0x000b951e... (28 %)
+Writing at 0x000bf0a5... (29 %)
+Writing at 0x000c51ea... (30 %)
+Writing at 0x000cbd4a... (31 %)
+Writing at 0x000d0d21... (32 %)
+Writing at 0x000d5b96... (34 %)
+Writing at 0x000db21b... (35 %)
+Writing at 0x000e0645... (36 %)
+Writing at 0x000e5728... (37 %)
+Writing at 0x000ea538... (38 %)
+Writing at 0x000ef1fb... (39 %)
+Writing at 0x000f40d6... (40 %)
+Writing at 0x000f9139... (41 %)
+Writing at 0x000fde48... (42 %)
+Writing at 0x00102f3f... (43 %)
+Writing at 0x00107dc7... (44 %)
+Writing at 0x0010cd06... (45 %)
+Writing at 0x0011193a... (46 %)
+Writing at 0x00116f3b... (47 %)
+Writing at 0x0011c19f... (48 %)
+Writing at 0x00121504... (50 %)
+Writing at 0x00126752... (51 %)
+Writing at 0x0012b766... (52 %)
+Writing at 0x00130638... (53 %)
+Writing at 0x001354b4... (54 %)
+Writing at 0x0013a48d... (55 %)
+Writing at 0x0013f5c5... (56 %)
+Writing at 0x00144af9... (57 %)
+Writing at 0x00149885... (58 %)
+Writing at 0x0014f02d... (59 %)
+Writing at 0x00154ed0... (60 %)
+Writing at 0x0015b595... (61 %)
+Writing at 0x00161f01... (62 %)
+Writing at 0x00167fa5... (63 %)
+Writing at 0x0016dd6a... (64 %)
+Writing at 0x00173f5f... (65 %)
+Writing at 0x00179f30... (67 %)
+Writing at 0x0017fe1a... (68 %)
+Writing at 0x001864c4... (69 %)
+Writing at 0x0018c5ab... (70 %)
+Writing at 0x00192408... (71 %)
+Writing at 0x00198479... (72 %)
+Writing at 0x0019ea97... (73 %)
+Writing at 0x001a49ef... (74 %)
+Writing at 0x001aa9c9... (75 %)
+Writing at 0x001afb95... (76 %)
+Writing at 0x001b4e89... (77 %)
+Writing at 0x001ba5e3... (78 %)
+Writing at 0x001bfdd4... (79 %)
+Writing at 0x001c50dc... (80 %)
+Writing at 0x001ca62e... (81 %)
+Writing at 0x001d0494... (82 %)
+Writing at 0x001d62cc... (84 %)
+Writing at 0x001dbf2f... (85 %)
+Writing at 0x001e1d1e... (86 %)
+Writing at 0x001e76c3... (87 %)
+Writing at 0x001ed033... (88 %)
+Writing at 0x001f4acc... (89 %)
+Writing at 0x001fc9f3... (90 %)
+Writing at 0x0020319b... (91 %)
+Writing at 0x002097b6... (92 %)
+Writing at 0x0020f7fe... (93 %)
+Writing at 0x00216267... (94 %)
+Writing at 0x0021c6f4... (95 %)
+Writing at 0x00222123... (96 %)
+Writing at 0x00228188... (97 %)
+Writing at 0x0022e0e6... (98 %)
+Writing at 0x002334a8... (100 %)
+Wrote 2245664 bytes (1525914 compressed) at 0x00010000 in 34.8 seconds (effective 516.4 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 105...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (105 compressed) at 0x00008000 in 0.0 seconds (effective 491.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
