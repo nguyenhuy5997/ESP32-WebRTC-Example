@@ -4,7 +4,7 @@
 This demo demonstrates how to use `esp_webrtc` to build a doorbell application. The code is based on the Google [apprtc](https://github.com/webrtc/apprtc) project, with custom signaling through WebSocket.
 
 ## Hardware requirement
-The default setup uses the [ESP32P4-Function-Ev-Board](https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32p4/esp32-p4-function-ev-board/user_guide.html), which includes one SC2336 camera.
+The setup board is ESP32-LyraT V4.3 https://docs.espressif.com/projects/esp-adf/en/latest/design-guide/dev-boards/board-esp32-lyrat-v4.3.html
 
 ## How to build
 
